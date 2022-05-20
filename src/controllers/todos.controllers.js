@@ -111,7 +111,10 @@ const updatePartialTodo = (id, data) => {
             }
         }
     }
-    return todosDB[index]
+    return {
+        status: 200,
+        json: todosDB[index]
+    }
 }
 
 exports.getAllTodos = getAllTodos
